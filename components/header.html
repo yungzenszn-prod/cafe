@@ -1,0 +1,54 @@
+<!-- Header Component -->
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <a href="#" class="logo">Cafe Zen</a>
+            
+                <nav>
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                        <li><a href="#" class="nav-link" data-page="beats">Beats</a></li>
+                        <li><a href="#" class="nav-link" data-page="licensing">Licensing</a></li>
+                        <li><a href="#" class="nav-link" data-page="about">About</a></li>
+                        <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
+                        <li>
+                            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" aria-pressed="false">
+                                <span class="theme-icon" aria-hidden="true">☾</span>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            
+            <div class="header-actions">
+                <button class="search-btn" id="search-btn" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                <button class="cart-btn cart-pill" id="cart-btn" aria-label="Cart">
+                    <span class="cart-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.8 13.5a2 2 0 0 0 2 1.5h9.7a2 2 0 0 0 2-1.5L23 6H6"></path>
+                        </svg>
+                    </span>
+                    <span class="cart-count" id="cart-count">0</span>
+                    <span class="cart-price-tag" id="nav-cart-total">$0.00</span>
+                    <span class="cart-popover" id="cart-popover">
+                        <span class="cart-popover-icon">i</span>
+                        Items in cart
+                    </span>
+                </button>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="4" x2="20" y1="12" y2="12"></line>
+                        <line x1="4" x2="20" y1="6" y2="6"></line>
+                        <line x1="4" x2="20" y1="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>

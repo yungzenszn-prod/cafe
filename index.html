@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Zen - Premium Beats</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+</head>
+<body>
+    <!-- Header Component -->
+    <div id="header"></div>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Home Page Content -->
+        <section id="hero" class="hero-section page-section" data-page-section="home">
+            <div class="container">
+                <h1 class="hero-title">Cafe Zen</h1>
+                <p class="hero-subtitle">Premium beats for your creative journey</p>
+                <div class="hero-cta">
+                    <button class="btn btn-primary btn-browse" onclick="navigateTo('beats')">Browse Beats</button>
+                    <button class="btn btn-secondary" onclick="navigateTo('about')">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Beats Section -->
+        <section id="featured-beats" class="section page-section" data-page-section="home">
+            <div class="container">
+                <h2 class="section-title">Featured Beats</h2>
+                <div class="beats-list" id="featured-beats-grid">
+                    <!-- Beat cards will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Tiers Section -->
+        <section id="pricing-tiers" class="section section-alt page-section" data-page-section="home">
+            <div class="container">
+                <h2 class="section-title">Beat Licensing Tiers</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="pricing-tier">Starter Lease</div>
+                        <div class="pricing-price">$19</div>
+                        <div class="pricing-note">Perfect for demos and socials</div>
+                        <ul class="pricing-features">
+                            <li>MP3 + WAV</li>
+                            <li>Up to 10k streams</li>
+                            <li>1 music video</li>
+                        </ul>
+                        <button class="btn btn-outline btn-sm">Read License</button>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge"><span class="pricing-star">✦</span>Most Loved</div>
+                        <div class="pricing-tier">Creator+</div>
+                        <div class="pricing-price">$49</div>
+                        <div class="pricing-note">Best balance for releases</div>
+                        <ul class="pricing-features">
+                            <li>WAV + stems</li>
+                            <li>Up to 100k streams</li>
+                            <li>2 music videos</li>
+                        </ul>
+                        <button class="btn btn-primary btn-sm">Read License</button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-tier">Unlimited</div>
+                        <div class="pricing-price">$149</div>
+                        <div class="pricing-note">For full commercial use</div>
+                        <ul class="pricing-features">
+                            <li>Unlimited streams</li>
+                            <li>Radio ready</li>
+                            <li>Priority support</li>
+                        </ul>
+                        <button class="btn btn-outline btn-sm">Read License</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section id="categories" class="section section-alt page-section" data-page-section="home">
+            <div class="container">
+                <h2 class="section-title">Browse by Genre</h2>
+                <div class="categories-grid" id="categories-grid">
+                    <!-- Category cards will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Browse Beats Page -->
+        <section id="beats-page" class="section beats-page page-section is-hidden" data-page-section="beats">
+            <div class="container">
+                <div class="beats-page-header">
+                    <div>
+                        <h2 class="beats-page-title">Browse Beats</h2>
+                        <p class="beats-page-subtitle">Hand-picked rhythms, ready for your next release.</p>
+                    </div>
+                    <button class="btn btn-primary btn-sm" onclick="navigateTo('home')">Back to Home</button>
+                </div>
+                <div class="beats-page-content">
+                    <aside class="beats-filters" id="beats-filters">
+                        <!-- Filters will be injected here -->
+                    </aside>
+                    <div class="beats-list" id="beats-list">
+                        <!-- Beat list items will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="checkout-page" class="section page-section is-hidden" data-page-section="checkout">
+            <div class="container">
+                <div class="beats-page-header">
+                    <div>
+                        <h2 class="beats-page-title">Checkout</h2>
+                        <p class="beats-page-subtitle">Almost there — secure your beats and get instant delivery.</p>
+                    </div>
+                    <button class="btn btn-outline btn-sm" onclick="navigateTo('home')">Continue Browsing</button>
+                </div>
+                <div class="checkout-layout">
+                    <div class="checkout-card" id="checkout-summary"></div>
+                    <div class="checkout-card">
+                        <div class="checkout-title">Payment Method</div>
+                        <div class="payment-options">
+                            <label class="payment-option">
+                                <input type="radio" name="payment" checked>
+                                <span>Credit / Debit Card</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment">
+                                <span>PayPal (Sandbox)</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment">
+                                <span>Stripe (Sandbox)</span>
+                            </label>
+                        </div>
+                        <div class="checkout-form">
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="card-name">Name on card</label>
+                                    <input id="card-name" type="text" placeholder="Jane Doe">
+                                </div>
+                                <div class="form-field">
+                                    <label for="card-number">Card number</label>
+                                    <input id="card-number" type="text" placeholder="4242 4242 4242 4242">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="card-exp">Expiry</label>
+                                    <input id="card-exp" type="text" placeholder="MM/YY">
+                                </div>
+                                <div class="form-field">
+                                    <label for="card-cvc">CVC</label>
+                                    <input id="card-cvc" type="text" placeholder="123">
+                                </div>
+                            </div>
+                            <button class="btn btn-primary btn-full">Pay Securely</button>
+                            <p class="checkout-note">This is a demo checkout. No real payments are processed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section page-section" data-page-section="home">
+            <div class="container">
+                <div class="contact-card">
+                    <div class="contact-copy">
+                        <h2 class="section-title">Let’s Create Something</h2>
+                        <p>Tell me about your project, timeline, and sound. I’ll get back with the right beats and a clear next step.</p>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="contact-name">Name</label>
+                                <input id="contact-name" type="text" placeholder="Your name" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="contact-email">Email</label>
+                                <input id="contact-email" type="email" placeholder="you@email.com" required>
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label for="contact-subject">Subject</label>
+                            <input id="contact-subject" type="text" placeholder="What do you need?" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" rows="4" placeholder="Share the vibe, reference tracks, or deadlines." required></textarea>
+                        </div>
+                        <button class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer id="footer"></footer>
+
+    <!-- Audio Player (fixed bottom) -->
+    <div id="audio-player" class="audio-player hidden">
+        <!-- Audio player content will be dynamically inserted -->
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar hidden">
+        <button class="cart-handle" id="cart-handle" aria-label="Toggle cart">
+            <span class="cart-handle-icon">❮</span>
+        </button>
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be dynamically inserted -->
+            </div>
+            <div class="cart-offers">
+                <div class="cart-offers-title">Bundle Offers</div>
+                <div class="cart-offer">Add 2 more beats to unlock 10% off</div>
+                <div class="cart-offer">Free stems on orders over $99</div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total">$0.00</span>
+                </div>
+                <button class="btn btn-primary btn-full" onclick="navigateTo('checkout')">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
